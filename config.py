@@ -39,6 +39,7 @@ SNOW_INSTANCE = 'dev12345'
 IOS_XE_HOST = '10.1.1.1'
 IOS_XE_USER = 'cisco'
 IOS_XE_PASS = 'cisco'
+IOS_XE_PORT = 830
 
 UNAUTH_USER = 'blitz'
 

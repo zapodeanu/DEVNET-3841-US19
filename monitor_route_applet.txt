@@ -1,0 +1,8 @@
+!
+event manager applet monitor_route
+ event routing network 11.1.0.0/16 type remove ge 16 le 16 vrf default maxrun 30
+ action 1.0 cli command "enable"
+ action 2.0 cli command "guestshell run python /bootflash/Create_2019_p/monitor_route.py 11.1.0.0/16"
+ action 3.0 cli command "exit"
+ action 4.0 cli command "end"
+!

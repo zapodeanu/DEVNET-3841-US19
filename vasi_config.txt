@@ -1,0 +1,28 @@
+!
+ip vrf R
+ rd 1:1
+ route-target export 1:1
+ route-target import 1:1
+!
+interface Loopback111
+ ip vrf forwarding R
+ ip address 11.1.1.1 255.255.0.0
+!
+interface vasileft11
+ ip address 11.11.11.1 255.255.255.0
+ keepalive 5
+!
+interface vasiright11
+ ip vrf forwarding R
+ ip address 11.11.11.2 255.255.255.0
+ keepalive 5
+!
+router eigrp 11
+ !
+ address-family ipv4 vrf R
+  redistribute connected
+  network 11.11.11.2 0.0.0.0
+  autonomous-system 11
+ exit-address-family
+ network 11.11.11.1 0.0.0.0
+!

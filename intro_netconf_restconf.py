@@ -102,14 +102,13 @@ def get_restconf_hostname():
     return hostname
 
 
-print(str('Interface Operational Status via NETCONF: \n' + get_netconf_int_oper_status('GigabitEthernet1')))
-
-input('Enter any key to continue ')
 
 oper_data = get_restconf_int_oper_data('GigabitEthernet1')
 print('Interface Operational Data via RESTCONF: \n')
 print(json.dumps(oper_data, indent=4, separators=(' , ', ' : ')))
 
 # print(str('Device Hostname via NETCONF: \n' + get_netconf_hostname()))
+
+print(str('\nInterface Operational Status via NETCONF: \n' + get_netconf_int_oper_status('GigabitEthernet2')))
 
 print(str('\nDevice Hostname via RESTCONF: \n' + get_restconf_hostname()))

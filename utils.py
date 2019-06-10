@@ -1,7 +1,7 @@
 #!/usr/bin/env python2
 
 
-# developed by Gabi Zapodeanu, TME, ENBU, Cisco Systems
+# developed by Gabi Zapodeanu, TME, Enterprise Networking, Cisco Systems
 
 
 # the utils module includes common utilized utility functions

@@ -1,5 +1,5 @@
 
-# developed by Gabi Zapodeanu, TSA, Global Partner Organization
+# developed by Gabi Zapodeanu, TME, Enterprise Networking, Cisco Systems
 
 
 import requests
@@ -9,7 +9,7 @@ import netconf_restconf
 import config
 
 from config import SNOW_URL, SNOW_DEV, SNOW_PASS
-from config import DEVICE_IP, DEVICE_USER, DEVICE_PASS
+from config import IOS_XE_HOST, IOS_XE_USER, IOS_XE_PASS
 
 from requests.packages.urllib3.exceptions import InsecureRequestWarning
 
@@ -57,7 +57,7 @@ logging.basicConfig(
     format='%(asctime)s.%(msecs)03d %(levelname)s %(module)s - %(funcName)s: %(message)s',
     datefmt='%Y-%m-%d %H:%M:%S')
 
-device_name = netconf_restconf.get_restconf_hostname(DEVICE_IP, DEVICE_USER, DEVICE_PASS)
+device_name = netconf_restconf.get_restconf_hostname(IOS_XE_HOST, IOS_XE_USER, IOS_XE_PASS)
 
 comments = ('The device with the name: ' + str(device_name) + ' created this test incident using APIs')
 incident = create_incident('Device Notification - ' + str(device_name), comments, SNOW_DEV, 3)

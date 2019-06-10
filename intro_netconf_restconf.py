@@ -1,6 +1,6 @@
 
 
-# developed by Gabi Zapodeanu, TSA, Global Partner Organization
+# developed by Gabi Zapodeanu, TME, Enterprise Networking, Cisco Systems
 
 
 import requests
